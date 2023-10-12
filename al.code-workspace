@@ -4,6 +4,9 @@
       "path": "ReleaseComment"
     },
     {
+      "path": "ReleaseComment.Test"
+    },
+    {
       "path": ".AL-Go"
     }
   ],
