@@ -1,6 +1,9 @@
 {
   "folders": [
     {
+      "path": "ReleaseComment"
+    },
+    {
       "path": "ReleaseComment.Test"
     },
     {
