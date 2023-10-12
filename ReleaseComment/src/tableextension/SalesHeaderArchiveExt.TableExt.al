@@ -1,4 +1,3 @@
-
 tableextension 50101 PTESalesHeaderArchiveExt extends "Sales Header Archive"
 {
     fields
@@ -8,7 +7,5 @@ tableextension 50101 PTESalesHeaderArchiveExt extends "Sales Header Archive"
             Caption = 'Release Comment';
             DataClassification = CustomerContent;
         }
-
     }
-
 }

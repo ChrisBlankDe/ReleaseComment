@@ -8,7 +8,6 @@ pageextension 50101 PTESalesOrderArchive extends "Sales Order Archive"
             {
                 ApplicationArea = All;
             }
-
         }
     }
 }

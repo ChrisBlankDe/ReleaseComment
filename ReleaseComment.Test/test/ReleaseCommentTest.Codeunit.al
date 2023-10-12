@@ -3,8 +3,6 @@ codeunit 50111 PTEReleaseCommentTest
     Description = 'Description';
     Subtype = Test;
 
-
-
     trigger OnRun();
     begin
         IsInitialized := false;
@@ -25,7 +23,6 @@ codeunit 50111 PTEReleaseCommentTest
 
         // CUSTOMIZATION: Prepare setup tables etc. that are used for all test functions
 
-
         IsInitialized := true;
         Commit();
 
@@ -41,8 +38,8 @@ codeunit 50111 PTEReleaseCommentTest
     // [FEATURE] Feature Id / Description
     // [SCENARIO] Scenario Description
     var
-        LibrarySales: Codeunit "Library - Sales";
         SalesHeader: Record "Sales Header";
+        LibrarySales: Codeunit "Library - Sales";
     begin
         Initialize();
         // [GIVEN] Given
@@ -60,8 +57,8 @@ codeunit 50111 PTEReleaseCommentTest
     // [FEATURE] Feature Id / Description
     // [SCENARIO] Scenario Description
     var
-        LibrarySales: Codeunit "Library - Sales";
         SalesHeader: Record "Sales Header";
+        LibrarySales: Codeunit "Library - Sales";
     begin
         Initialize();
         // [GIVEN] Given
@@ -74,7 +71,7 @@ codeunit 50111 PTEReleaseCommentTest
         // [WHEN] When
         LibrarySales.ReleaseSalesDocument(SalesHeader);
         // [THEN] Then
-        assert.AreNotEqual('', SalesHeader.PTEReleaseComment, '');
+        Assert.AreNotEqual('', SalesHeader.PTEReleaseComment, '');
     end;
 
     [Test]
@@ -83,8 +80,8 @@ codeunit 50111 PTEReleaseCommentTest
     // [FEATURE] Feature Id / Description
     // [SCENARIO] Scenario Description
     var
-        LibrarySales: Codeunit "Library - Sales";
         SalesHeader: Record "Sales Header";
+        LibrarySales: Codeunit "Library - Sales";
     begin
         Initialize();
         // [GIVEN] Given
@@ -106,10 +103,10 @@ codeunit 50111 PTEReleaseCommentTest
     // [FEATURE] Feature Id / Description
     // [SCENARIO] Scenario Description
     var
-        LibrarySales: Codeunit "Library - Sales";
         SalesHeader: Record "Sales Header";
-        ArchiveManagement: Codeunit ArchiveManagement;
         SalesHeaderArchive: Record "Sales Header Archive";
+        ArchiveManagement: Codeunit ArchiveManagement;
+        LibrarySales: Codeunit "Library - Sales";
     begin
         Initialize();
         // [GIVEN] Given
@@ -122,9 +119,7 @@ codeunit 50111 PTEReleaseCommentTest
         SalesHeaderArchive.SetRange("No.", SalesHeader."No.");
         SalesHeaderArchive.FindLast();
         Assert.AreEqual('TEST COMMENT', SalesHeaderArchive.PTEReleaseComment, '');
-
     end;
-
 
     [ConfirmHandler]
     procedure ExpectedConfirmHandler(Question: Text[1024]; var Reply: Boolean)

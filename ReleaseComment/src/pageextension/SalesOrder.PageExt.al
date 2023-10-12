@@ -8,7 +8,6 @@ pageextension 50100 PTESalesOrder extends "Sales Order"
             {
                 ApplicationArea = All;
             }
-
         }
     }
 }

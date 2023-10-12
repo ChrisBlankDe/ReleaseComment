@@ -7,7 +7,5 @@ tableextension 50100 PTESalesHeaderExt extends "Sales Header"
             Caption = 'Release Comment';
             DataClassification = CustomerContent;
         }
-
     }
-
 }

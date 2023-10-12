@@ -1,6 +1,5 @@
 codeunit 50100 PTEReleaseComment
 {
-
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Release Sales Document", OnBeforeManualReleaseSalesDoc, '', false, false)]
     local procedure CheckReleaseComment(var SalesHeader: Record "Sales Header")
     var
