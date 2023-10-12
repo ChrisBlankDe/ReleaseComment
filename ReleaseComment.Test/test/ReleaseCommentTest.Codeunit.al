@@ -1,4 +1,4 @@
-codeunit 50111 ReleaseCommentTest
+codeunit 50111 PTEReleaseCommentTest
 {
     Description = 'Description';
     Subtype = Test;
@@ -12,14 +12,14 @@ codeunit 50111 ReleaseCommentTest
 
     local procedure Initialize();
     begin
-        LibraryTestInitialize.OnTestInitialize(Codeunit::ReleaseCommentTest);
+        LibraryTestInitialize.OnTestInitialize(Codeunit::PTEReleaseCommentTest);
         ClearLastError();
         LibraryVariableStorage.Clear();
         LibrarySetupStorage.Restore();
         if IsInitialized then
             exit;
 
-        LibraryTestInitialize.OnBeforeTestSuiteInitialize(Codeunit::ReleaseCommentTest);
+        LibraryTestInitialize.OnBeforeTestSuiteInitialize(Codeunit::PTEReleaseCommentTest);
 
         LibraryRandom.Init();
 
@@ -33,7 +33,7 @@ codeunit 50111 ReleaseCommentTest
         // This is done InMemory, so it could be run after the COMMIT above
         //   LibrarySetupStorage.Save(DATABASE::"[SETUP TABLE ID]");
 
-        LibraryTestInitialize.OnAfterTestSuiteInitialize(Codeunit::ReleaseCommentTest);
+        LibraryTestInitialize.OnAfterTestSuiteInitialize(Codeunit::PTEReleaseCommentTest);
     end;
 
     [Test]
