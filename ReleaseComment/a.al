@@ -1,4 +1,5 @@
-tableextension 50100 PTESalesHeaderExt extends "Sales Header"
+
+tableextension 50101 PTESalesHeaderArchiveExt extends "Sales Header Archive"
 {
     fields
     {
