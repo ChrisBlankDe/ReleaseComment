@@ -2,5 +2,6 @@
   "country": "de",
   "appFolders": [],
   "testFolders": [],
-  "bcptTestFolders": []
+  "bcptTestFolders": [],
+  "repoVersion": "1.1"
 }
